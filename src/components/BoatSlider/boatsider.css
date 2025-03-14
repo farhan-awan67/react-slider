@@ -1,0 +1,188 @@
+#boat-sec {
+  background-color: #f8f7f2;
+  padding: 59px 20px 96px min(5vw, 8%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#card-wrapper {
+  overflow-x: scroll;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain; /* Prevent accidental side-scrolling */
+  scroll-snap-type: x mandatory; /* Snaps items into position */
+  pointer-events: none; /* Prevent mouse interactions */
+}
+#card-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+#card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 335px;
+  padding: 23px 22px;
+  background-color: #e8e6db;
+  scroll-snap-align: center; /* Snaps each card to center */
+}
+
+#card h2 {
+  color: rgba(0, 0, 0, 0.3);
+  font-family: "TORONTO", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+#card img {
+  width: 100%;
+  margin: 0;
+}
+
+#card #scroll-this-boat {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 27px;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto; /* Ensure links are clickable */
+}
+
+#card #scroll-this-boat > button {
+  background-color: #282828;
+  color: #fff;
+  font-family: "Neue Montreal", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px 12px 14px;
+  cursor: pointer !important;
+  text-decoration: none;
+}
+#scroll-this-boat button #card-icon {
+  width: 25px;
+  height: 25px;
+  font-size: 18px;
+  margin: 0;
+}
+#scroll-this-boat:hover #card-icon {
+  margin-left: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+#boat-btns {
+  margin-top: 22px;
+}
+
+#boat-btns > button {
+  background-color: #1c8b97;
+  border: none;
+  color: white;
+  padding: 16px 19px;
+  cursor: pointer;
+}
+#boat-btns #white-btn {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background-color: #f8f7f2;
+  color: black;
+  margin-left: 12px;
+  padding: 15px 18px;
+}
+
+#boat-btns > button #slide-icon {
+  font-size: 18px;
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width: 600px) {
+  #boat-sec {
+    background-color: #f8f7f2;
+    padding: 163px 0 175px min(5vw, 8%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  #card-wrapper {
+    overscroll-behavior-x: contain; /* Prevent accidental side-scrolling */
+    scroll-snap-type: x mandatory; /* Snaps items into position */
+    pointer-events: none; /* Prevent mouse interactions */
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0)
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0)
+    );
+  }
+  #card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 583.887px;
+    height: auto;
+    padding: 35px 43px;
+  }
+  #card h2 {
+    width: 100%;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: "TORONTO", sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: left;
+  }
+  #card img {
+    width: 450px;
+    height: 301px;
+    margin: 0;
+    object-fit: contain;
+  }
+  #card #scroll-this-boat > button {
+    background-color: #282828;
+    color: #fff;
+    font-family: "Neue Montreal", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    /* padding: 15px 21px 15px 21px; */
+    padding: 15px 15px 16px 21px;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+  }
+  #scroll-this-boat button #card-icon {
+    font-size: 25px;
+    margin-top: 1px;
+  }
+
+  #boat-btns {
+    margin-top: 46px;
+  }
+}
